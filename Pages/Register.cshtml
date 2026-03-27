@@ -1,0 +1,36 @@
+﻿@page
+@model RegisterModel
+
+<h2>Регистрация</h2>
+
+<form id="registerForm">
+    <div>
+        <label>Полное имя:</label><br>
+        <input type="text" id="fullName" required>
+    </div>
+    <div>
+        <label>Email:</label><br>
+        <input type="email" id="email" required>
+    </div>
+    <div>
+        <label>Пароль (мин. 6 символов):</label><br>
+        <input type="password" id="password" required minlength="6">
+    </div>
+    <div>
+        <label>Вуз:</label><br>
+        <select id="university" required>
+            <option value="">Выберите вуз</option>
+            <option value="ПНИПУ">ПНИПУ</option>
+            <option value="ПГНИУ">ПГНИУ</option>
+            <option value="ПГГПУ">ПГГПУ</option>
+            <option value="НИУ ВШЭ">НИУ ВШЭ</option>
+        </select>
+    </div>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+<p>
+    Уже есть аккаунт? <a href="/Login">Войти</a>
+</p>
+
+<div id="message" style="color: red;"></div>
