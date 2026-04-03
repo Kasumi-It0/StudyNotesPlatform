@@ -20,12 +20,14 @@ public class TokenService
         var tokenHandler = new JwtSecurityTokenHandler();
         var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]!);
 
+        // Здесь мы формируем данные, которые будут зашифрованы в токене (Claims)
         var claims = new[]
         {
             new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.Name, user.FullName),
-            new Claim("University", user.University)
+            // Теперь передаем ID университета как строку, так как Claim принимает только строки
+            new Claim("UniversityId", user.UniversityId.ToString())
         };
 
         var tokenDescriptor = new SecurityTokenDescriptor

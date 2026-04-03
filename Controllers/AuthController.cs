@@ -1,86 +1,49 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Npgsql;
 using StudyNotesPlatform.Models;
-using StudyNotesPlatform.Services;
-using System.Security.Cryptography;
-using System.Text;
+using System;
+using System.Threading.Tasks;
 
 namespace StudyNotesPlatform.Controllers;
 
-[Route("api/[controller]")]
 [ApiController]
+[Route("api/[controller]")]
 public class AuthController : ControllerBase
 {
-    private readonly TokenService _tokenService;
-
-    public AuthController(TokenService tokenService)
-    {
-        _tokenService = tokenService;
-    }
+    // Обязательно проверь правильность пароля и имени БД из pgAdmin
+    private readonly string _connectionString = "Host=127;Username=postgres;Password=123;Database=Конспекты";
 
     [HttpPost("register")]
-    public IActionResult Register([FromBody] RegisterModel model)
+    public async Task<IActionResult> Register([FromBody] UserRegistrationRequest request)
     {
-        if (UserStorage.Users.Any(u => u.Email == model.Email))
+        try
         {
-            return BadRequest(new AuthResponse { Message = "Пользователь с таким email уже существует" });
+            using var conn = new NpgsqlConnection(_connectionString);
+            await conn.OpenAsync();
+
+            string sql = "INSERT INTO users (role_id, university_id, full_name, email, password_hash) VALUES (@r, @u, @n, @e, @p) RETURNING id;";
+
+            using var cmd = new NpgsqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("r", 1); // По умолчанию роль студента [cite: 1]
+            cmd.Parameters.AddWithValue("u", request.UniversityId); // Внешний ключ на вуз [cite: 2]
+            cmd.Parameters.AddWithValue("n", request.FullName);
+            cmd.Parameters.AddWithValue("e", request.Email);
+            cmd.Parameters.AddWithValue("p", request.Password);
+
+            var result = await cmd.ExecuteScalarAsync();
+            return Ok(new { Id = result, Message = "Успешная регистрация в PostgreSQL" });
         }
-
-        var passwordHash = HashPassword(model.Password);
-
-        var newUser = new User
+        catch (Exception ex)
         {
-            Id = UserStorage.Users.Count + 1,
-            FullName = model.FullName,
-            Email = model.Email,
-            PasswordHash = passwordHash,
-            University = model.University
-        };
-
-        UserStorage.Users.Add(newUser);
-
-        var token = _tokenService.GenerateToken(newUser);
-
-        return Ok(new AuthResponse
-        {
-            Token = token,
-            FullName = newUser.FullName,
-            Email = newUser.Email,
-            University = newUser.University,
-            Message = "Регистрация успешна"
-        });
-    }
-
-    [HttpPost("login")]
-    public IActionResult Login([FromBody] LoginModel model)
-    {
-        var user = UserStorage.Users.FirstOrDefault(u => u.Email == model.Email);
-
-        if (user == null || !VerifyPassword(model.Password, user.PasswordHash))
-        {
-            return Unauthorized(new AuthResponse { Message = "Неверный email или пароль" });
+            return BadRequest($"Ошибка БД: {ex.Message}");
         }
-
-        var token = _tokenService.GenerateToken(user);
-
-        return Ok(new AuthResponse
-        {
-            Token = token,
-            FullName = user.FullName,
-            Email = user.Email,
-            University = user.University,
-            Message = "Вход выполнен успешно"
-        });
     }
+}
 
-    private string HashPassword(string password)
-    {
-        using var sha256 = SHA256.Create();
-        var bytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-        return Convert.ToBase64String(bytes);
-    }
-
-    private bool VerifyPassword(string password, string hash)
-    {
-        return HashPassword(password) == hash;
-    }
+public class UserRegistrationRequest
+{
+    public string FullName { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
+    public int UniversityId { get; set; }
 }

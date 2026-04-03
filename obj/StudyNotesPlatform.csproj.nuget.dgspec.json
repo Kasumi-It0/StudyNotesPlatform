@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\Учеба\\Хакатон типо\\StudyNotesPlatform\\StudyNotesPlatform.csproj": {}
+    "D:\\StudyNotesPlatform-main\\StudyNotesPlatform.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\Учеба\\Хакатон типо\\StudyNotesPlatform\\StudyNotesPlatform.csproj": {
+    "D:\\StudyNotesPlatform-main\\StudyNotesPlatform.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\Учеба\\Хакатон типо\\StudyNotesPlatform\\StudyNotesPlatform.csproj",
+        "projectUniqueName": "D:\\StudyNotesPlatform-main\\StudyNotesPlatform.csproj",
         "projectName": "StudyNotesPlatform",
-        "projectPath": "C:\\Users\\user\\Desktop\\Учеба\\Хакатон типо\\StudyNotesPlatform\\StudyNotesPlatform.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\Учеба\\Хакатон типо\\StudyNotesPlatform\\obj\\",
+        "projectPath": "D:\\StudyNotesPlatform-main\\StudyNotesPlatform.csproj",
+        "packagesPath": "C:\\Users\\sanni\\.nuget\\packages\\",
+        "outputPath": "D:\\StudyNotesPlatform-main\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sanni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -53,6 +53,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.2, )"
             }
           },
           "imports": [
@@ -74,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
