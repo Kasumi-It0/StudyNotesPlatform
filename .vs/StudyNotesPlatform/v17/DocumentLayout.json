@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\StudyNotesPlatform-main\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\models\\authmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:models\\authmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -25,10 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\models\\authmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|solutionrelative:models\\authmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8CD8B9E1-63F1-48F4-98C6-6209ED9CA4BB}|StudyNotesPlatform.csproj|d:\\studynotesplatform-main\\pages\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -54,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
@@ -90,12 +90,11 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABrAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T17:23:06.02Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T17:23:06.02Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "AuthModels.cs",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\Models\\AuthModels.cs",
               "RelativeDocumentMoniker": "Models\\AuthModels.cs",
@@ -103,11 +102,12 @@
               "RelativeToolTip": "Models\\AuthModels.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-27T17:19:53.571Z"
+              "WhenOpened": "2026-03-27T17:19:53.571Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -120,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -132,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "Services\\TokenService.cs",
@@ -145,7 +145,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\Pages\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
@@ -157,7 +157,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\StudyNotesPlatform-main\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -165,8 +165,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-03-27T17:13:28.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-27T17:13:28.155Z"
             },
             {
               "$type": "Document",
