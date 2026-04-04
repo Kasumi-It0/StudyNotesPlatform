@@ -16,7 +16,7 @@ public class RegisterModel
     public string Password { get; set; } = string.Empty;
 
     [Required]
-    public string University { get; set; } = string.Empty;
+    public int UniversityId { get; set; }   // ← теперь это ID
 }
 
 public class LoginModel
@@ -34,6 +34,7 @@ public class AuthResponse
     public string Token { get; set; } = string.Empty;
     public string FullName { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
-    public string University { get; set; } = string.Empty;
+    public string Role { get; set; } = string.Empty;
+    public string UniversityName { get; set; } = string.Empty;
     public string Message { get; set; } = string.Empty;
 }
